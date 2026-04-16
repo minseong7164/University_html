@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>고객의 소리</h2>
+    <form name="input" action="getfeedback.jsp" method="get">
+        아이디: <input type="text" name="name"><br>
+        구매번호: <input type="text" name="number" size="10"><br>
+        패스워드: <input type="password" name="pass"><br>
+        제품을 평가해주세요.<br />
+        <textarea name="feedback" rows="5" cols="50">
+        </textarea><br>
+            성별: <br>
+            <label for="male">남성</label>
+            <input type="radio" name="gender" id="male" value="male"><br>
+            <label for="female">여성</label>
+            <input type="radio" name="gender" id="female" value="female"><br>
+            과일 선택:
+            <input type="checkbox" name="fruits" value="apple" checked>사과
+            <input type="checkbox" name="fruits" value="grape">포도
+            <input type="checkbox" name="fruits" value="apple">오렌지
+            <input type="submit" value="제출">
+            <input type="reset" value="초기화"> <br>
+            <select name="cars">
+                <option value="bmw">BMW</option>
+                <option value="benz">Benz</option>
+                <option value="hyundai" selected>현대자동차</option>
+                <option value="kia">기아자동차</option>
+            </select> <br>
+            <p>선호하는 브라우저를 선택해주세요.</p>
+            <form action="process.jsp">
+                <input list="browsers" name="browser">
+                <datalist id="browsers">
+                    <option value="구글 크롬">
+                    <option value="엣지">
+                    <option value="오페라">
+                    <option value="사파리">
+                    <option value="파이어폭스">
+                </datalist>
+                <input type="submit">
+            <input type="file" accept="image/jpg,image/gif">
+    </form>    
+</body>
+</html>
