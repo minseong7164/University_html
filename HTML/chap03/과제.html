@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>회원 가입 화면</legend>
+        <form action="adduser.jsp" method="post">
+            <p>
+                이름: <input type="text" name="name"><br>
+                주소: <input type="text" name="address"><br>
+                email:
+                <input type="email" name="email" required><br>
+                <input type="radio" name="gender" value="Male" id="Male">
+                <label for="Male">Male</label><br>
+                <input type="radio" name="gender" value="Female" id="Female">
+                <label for="Female">Female</label><br>
+                <input type="submit" value="Send" >
+                <input type="reset">
+            </p>
+        </form>
+    </fieldset>
+    
+</body>
+</html>

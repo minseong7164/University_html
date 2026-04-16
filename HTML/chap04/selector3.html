@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #special {
+            background-color: yellow;
+            color: red;
+        }
+        .type1 {
+            background-color: bisque;
+            color: yellow;
+            border: 2px solid blue;
+            display: inline;
+        }
+        body em{color: red;}
+        body>h1{color: blue;}
+        a:link{color: blue;}
+        a:visited{color: green;}
+        p:hover{
+            background-color: pink;
+            color: purple;
+        }
+        p.type1::before{
+            content: "이것은 중요";
+            background-color: yellow;
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>This headline is <em>very</em>important</h1>
+    <h1>웹프로그래밍</h1>
+    <p>HTML 학습하기</p>
+    <p id="special">CSS 학습하기</p>
+    <p>JAVASCRIPT 학습하기</p>
+    <p class="type1">JAVASCRIPT 예습하기</p>
+    <p class="type1">HTML 예습하기</p>
+    <p class="type1">CSS 예습하기</p>
+    <a href="https://www.w3.org">참고 사이트 W3C</a>
+    <a href="https://naver.com">참고 사이트 NAVER</a>
+</body>
+</html>
