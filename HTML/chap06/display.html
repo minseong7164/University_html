@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .menubar li{
+            display: inline;
+            background-color: yellow;
+            border: 1px solid;
+            border-color: red;
+            margin: 0;
+            padding: .5em;
+        }
+        span.a {
+            display: inline;
+            width: 100px;
+            height: 60px;
+            padding: 5px;
+            border: 1px solid rgb(136, 230, 152);
+            background-color: rgb(123, 214, 146);
+        }
+        span.b {
+            display: inline-block;
+            width: 100px;
+            height: 60px;
+            padding: 5px;
+            border: 1px solid blue;
+            background-color: rgb(132, 109, 196);
+        }
+        span.c {
+            display: block;
+            width: 100px;
+            height: 60px;
+            padding: 5px;
+            border: 1px solid blue;
+            background-color: rgb(224, 166, 176);
+        }
+    </style>
+</head>
+<body>
+    <ul class="menubar">
+        <li><a href="">홈으로</a></li>    
+        <li><a href="">회사 소개</a></li>    
+        <li><a href="">제품 소개</a></li>    
+        <li><a href="">질문과 대답</a></li>    
+        <li><a href="">연락처</a></li>    
+    </ul>
+    <p>
+        <span class="a">INLINE</span>
+        <span class="a">INLINE</span>
+    </p>
+    <p>
+        <span class="b">INLINE_BLOCK</span>
+        <span class="b">INLINE_BLOCK</span>
+    </p>
+    <p>
+        <span class="c">BLOCK</span>
+        <span class="c">BLOCK</span>
+    </p>
+</body>
+</html>
