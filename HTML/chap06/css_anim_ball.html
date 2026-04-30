@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes bounce {
+            from,
+            to {
+                bottom: 0px;
+                animation-timing-function: ease-out;
+            }
+            50% {
+                bottom: 200px;
+                animation-timing-function: ease-in;
+            }
+        }
+        #ball {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: red;
+            border-radius: 50px;
+            animation-name: bounce;
+            animation-iteration-count: infinite;
+            animation-duration: 5s;
+        }
+    </style>
+</head>
+<body>
+    <div id="ball"></div>
+</body>
+</html>
