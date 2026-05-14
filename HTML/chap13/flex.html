@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid + Flex 실습</title>
+
+  <style>
+    /* 전체 레이아웃 (Grid) */
+    .container {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+      grid-template-columns: 200px 1fr;
+      grid-template-rows: 80px 1fr 60px;
+      height: 100vh;
+      gap: 10px;
+    }
+
+    /* 영역 스타일 */
+    .header {
+      grid-area: header;
+      background: #4CAF50;
+      color: white;
+      display: flex;
+      /* 내부 Flex */
+      justify-content: center;
+      align-items: center;
+    }
+
+    .sidebar {
+      grid-area: sidebar;
+      background: #ddd;
+      padding: 10px;
+    }
+
+    .main {
+      grid-area: main;
+      background: #f9f9f9;
+      padding: 10px;
+
+      /* 카드 배치도 Flex */
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .footer {
+      grid-area: footer;
+      background: #333;
+      color: white;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* 카드 내부 (Flex) */
+    .card {
+      width: 200px;
+      height: 150px;
+      background: white;
+      border: 1px solid #ccc;
+
+      display: flex;
+      /* 내부 정렬 */
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 10px;
+    }
+
+    /* 카드 내부 요소 */
+    .card-title {
+      font-weight: bold;
+    }
+
+    .card-btn {
+      background: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 5px;
+      cursor: pointer;
+    }
+
+    @media screen and (max-width:640px) {
+      .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 'header'
+          'sidebar'
+          'main'
+          'footer';
+        gap: 10px;
+
+      }
+      .sidebar {
+          display: flex;
+          justify-content: space-around;
+        }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="header">헤더</div>
+
+    <div class="sidebar">
+      <p>메뉴1</p>
+      <p>메뉴2</p>
+      <p>메뉴3</p>
+    </div>
+
+    <div class="main">
+
+      <div class="card">
+        <div class="card-title">상품 1</div>
+        <div>설명 텍스트</div>
+        <div class="card-btn">구매</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">상품 2</div>
+        <div>설명 텍스트</div>
+        <div class="card-btn">구매</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">상품 3</div>
+        <div>설명 텍스트</div>
+        <div class="card-btn">구매</div>
+      </div>
+
+    </div>
+
+    <div class="footer">푸터</div>
+
+  </div>
+
+</body>
+
+</html>
