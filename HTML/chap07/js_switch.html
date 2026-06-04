@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="test"></h1>
+    <script>
+        let day = new Date().getDay();
+        switch (day) {
+            case 0:
+            case 6:
+                day = "주말";
+                break;
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+                day = "주중";
+                break;
+        }
+        document.getElementById("test").innerHTML = "오늘은" + day + "입니다.";
+    </script>
+</body>
+</html>

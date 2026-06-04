@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 id="remaining"></h2>
+
+    <script>
+        function dateUntilXmas() {
+            let now = new Date();
+            let xmas = new Date('December 25, ' + now.getFullYear());
+
+            let diff = xmas - now;
+
+            let seconds = Math.floor(diff / 1000 % 60);
+            let minutes = Math.floor(diff / 1000 / 60 % 60);
+            let hours = Math.floor(diff / 1000 / 60 / 60 % 24);
+            let days = Math.floor(diff / 1000 / 60 / 60 / 24);
+
+            let outStr = '금년 크리스마스까지 '
+                + days + '일, '
+                + hours + '시간, '
+                + minutes + '분, '
+                + seconds + '초 남았습니다.';
+
+            document.getElementById('remaining').innerHTML = outStr;
+
+            setTimeout(dateUntilXmas, 1000);
+        }
+
+        dateUntilXmas();
+    </script>
+</body>
+
+</html>

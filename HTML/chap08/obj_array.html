@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="result"></h2>
+    <button onclick="random_elem()">랜덤 선택</button>
+    <script>
+        let myArray3 = ["apple", "banana", "orange"];
+        function random_elem() {
+            let randomIndex = Math.floor(Math.random() * myArray3.length);
+
+            document.getElementById("result").innerHTML = 
+                myArray3[randomIndex];
+        }
+    </script>
+</body>
+</html>
